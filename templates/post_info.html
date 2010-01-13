@@ -1,0 +1,4 @@
+<p class="dull">
+  {{ post.created|date:"F j, Y" }} in {{ post.tags|join:", " }}
+  {% if is_admin %}<a href="{{ post.edit_url }}">Edit this post</a>{% endif %}
+</p>

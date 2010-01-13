@@ -1,0 +1,4 @@
+cron:
+- description: update posts count for each tag every hour
+  url: /tags/update
+  schedule: every 1 hours

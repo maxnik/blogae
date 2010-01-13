@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>{{ blog_title }}</title>
+    <link>http://{{ host }}</link>
+    <description></description>
+    <pubDate>{{ pub_date|date:"r" }}</pubDate>    
+    <lastBuildDate>{{ pub_date|date:"r" }}</lastBuildDate>
+  {% for post in posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>http://{{ host }}{{ post.absolute_url }}</link>
+      <description>{{ post.body }}</description>
+      <pubDate>{{ post.created|date:"r" }}</pubDate>
+    </item>
+  {% endfor %}
+  </channel>
+</rss>

@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=uft-8" />
+  <link rel="shortcut icon" href="/static/favicon.ico" />
+  <link rel="stylesheet" media="screen" type="text/css" href="/static/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="{{ blog_title }}" href="http://{{ host }}/rss.xml" />
+  <title>{{ title }}</title>
+</head>
+<body>
+  <div id="top"><a href="/">{{ blog_title }}</a></div>
+  <div id="sidebar">
+    {% if is_admin %}
+      <ul>
+        <li><a href="/posts/new">Create new post</a></li>
+        <li><a href="{{ logout_url }}">Logout</a></li>
+      </ul>
+    {% endif %}
+    <h2>Tags</h2>
+    <ol class="tags">
+    {% for tag in tags %}
+      <li><a href="{{ tag.absolute_url }}">{{ tag.title }}</a> <span class="dull">({{ tag.posts_count }})</span></li>
+    {% endfor %}
+    </ol>
+  </div>
+  <div id="main">{% block main %}{% endblock %}</div>
+</body>
+</html>
+
+
