@@ -168,7 +168,7 @@ class UpdateTagsHandler(webapp.RequestHandler):
                     tag.posts_count = actual_posts_count
                     tag.put()
             try:
-                del tag_titles[tag.title] # we already done with this tag
+                del tag_titles[tag.title] # we're already done with this tag
             except KeyError:
                 pass
 

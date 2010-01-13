@@ -2,7 +2,7 @@ HTML,BODY,DIV,SPAN,APPLET,OBJECT,IFRAME,H1,H2,H3,H4,H5,H6,P,BLOCKQUOTE,PRE,A,ABB
 
 /* Layout ******************************************/
 #top {
-  padding: 0.2em 0 0.8em 1em;
+  padding: 0.5em 0 1em 1.6em;
 }
 
 #sidebar {
@@ -57,10 +57,10 @@ h2,
 .pages li {
   font-family: Georgia, serif;
 }
-#top,
 h1 {
   font-size: 2em;
 }
+#top,
 h2,
 .pages li{
   font-size: 1.2em;
@@ -86,7 +86,7 @@ body {
 }
 
 a {
-  color: #00f;
+  color: #2853a1;
 }
 
 .dull {
